@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+body {
+    height: 100vh;
+    background-color: hsl(225, 100%, 94%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    background-color: white;
+    width: 350px;
+    height: 580px;
+    border-radius: 15px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.342);
+
+}
+
+main>img {
+    width: 350px;
+}
+
+h1 {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: hsl(223, 47%, 23%);
+    margin: 25px 0px;
+}
+
+main>p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: hsl(224, 23%, 55%);
+    margin: 25px 0px;
+}
+
+.price-container {
+    width: 90%;
+    height: 80px;
+    background-color: hsl(225, 100%, 98%);
+    margin: 25px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+
+}
+
+.plan {
+    display: grid;
+    grid-template-areas:
+        'img h2'
+        'img p'
+    ;
+    column-gap: 20px;
+    align-items: center;
+}
+
+.plan img {
+    grid-area: img;
+}
+
+.plan p {
+    grid-area: p;
+    font-size: 1rem;
+    color: hsl(224, 23%, 55%);
+}
+
+.plan h2 {
+    grid-area: h2;
+    font-size: 1rem;
+    font-weight: 900;
+    color: hsl(223, 47%, 23%);
+}
+
+.change-plan-link a {
+    font-weight: 700;
+    font-size: 0.8rem;
+    color: hsl(245, 75%, 52%);
+    text-decoration: underline;
+}
+.change-plan-link a:hover{
+    text-decoration: none;
+    color: hsl(245, 81%, 69%);
+    cursor: pointer;
+}
+
+button {
+    display: block;
+    width: 90%;
+    height: 50px;
+    margin: 20px auto;
+    border-radius: 10px;
+    border: none;
+    background-color: hsl(245, 75%, 52%);
+    color: white;
+    font-weight: bolder;
+    font-size: 0.9rem;
+    box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.048);
+}
+button:hover{
+    background-color: hsl(245, 71%, 66%);
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: hsl(224, 23%, 55%);
+    font-weight: bolder;
+    font-size: 1rem;
+}
+a:hover{
+    color: hsl(0, 0%, 0%);
+}

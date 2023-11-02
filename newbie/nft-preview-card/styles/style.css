@@ -32,10 +32,22 @@ main>.image-container {
     background-position: center;
     background-size: cover;
 }
-.image-container:hover{
- 
+
+.image-hover {
+    width: 310px;
+    height: 310px;
+    border-radius: 10px;
+    background-color: transparent;
+    position: absolute;
+    transform: translate(0px, -310px);
 }
 
+.image-hover:hover {
+    background: url('../images/icon-view.svg') no-repeat, hsla(178, 100%, 50%, 0.500);
+    background-position: center center;
+    cursor: pointer;
+
+}
 
 h1 {
     font-size: 22px;
