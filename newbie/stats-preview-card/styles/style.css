@@ -19,12 +19,12 @@ main {
     border-radius: 15px;
     overflow: hidden;
     width: 90%;
-    height: 90%;
+    height: 95%;
 }
 
 .image-container {
-    width: 100%;
-    background: hsl(277, 64%, 61%);
+    max-width: 100%;
+    background: #aa5cdb;
 
 }
 
