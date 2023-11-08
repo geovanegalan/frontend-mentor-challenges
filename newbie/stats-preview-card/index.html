@@ -6,13 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/responsive-style.css">
     <title>Stats Preview Card</title>
 </head>
 
 <body>
     <main>
         <div class="image-container">
-            <img src="images/image-header-mobile.jpg" alt="people-talking">
+            <picture>
+                <source media="(min-width:769px )" srcset="images/image-header-desktop.jpg" type="image/jpg">
+                <img src="images/image-header-mobile.jpg" alt="people-talking">
+            </picture>
         </div>
         <section>
             <h1>Get <strong>insights</strong> that help your business grow.</h1>

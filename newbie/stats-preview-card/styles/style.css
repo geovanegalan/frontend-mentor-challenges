@@ -21,17 +21,18 @@ main {
     width: 90%;
     height: 95%;
 }
-
+ /* NEED CORRECTION - CONTAINER IMG > IMG  */
 .image-container {
     max-width: 100%;
     background: #aa5cdb;
-
+    height: 50%;
 }
 
 .image-container img {
     width: 100%;
     mix-blend-mode: multiply;
     opacity: 0.75;
+    height: 100%;
 }
 
 section {
@@ -40,6 +41,7 @@ section {
     align-items: center;
     padding: 30px;
     text-align: center;
+    height: 50%;
 }
 
 h1 {
@@ -67,10 +69,12 @@ section>p {
     gap: 30px;
     font-family: 'Lexend Deca', sans-serif;
 }
-h2{
+
+h2 {
     color: white;
     font-weight: normal;
 }
+
 .infos-container p {
     color: hsla(0, 0%, 100%, 0.50);
     text-transform: uppercase;
