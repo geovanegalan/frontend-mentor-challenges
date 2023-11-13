@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+:root {
+    --dark-cyan: hsl(185, 75%, 39%);
+    --desatured-blue: hsl(229, 23%, 23%);
+    --dark-grayish-blue: hsl(227, 10%, 46%);
+    --dark-gray: hsl(0, 0%, 59%);
+}
+
+body {
+    background: url(../images/bg-pattern-top.svg) no-repeat, url(../images/bg-pattern-bottom.svg) no-repeat, var(--dark-cyan);
+    background-size: cover cover;
+    background-position: -700px -500px, 150px 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+main {
+    background: url(../images/bg-pattern-card.svg) no-repeat, white;
+    width: 337.5px;
+    height: 380px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+    padding: 30px 0px;
+}
+
+.profile-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    width: 100%;
+}
+
+.profile-description>img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 5px solid white;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 18px;
+    color: var(--desatured-blue);
+}
+
+span {
+    color: var(--dark-grayish-blue);
+    font-weight: normal;
+}
+
+.profile-description>p {
+    font-size: 15px;
+    color: var(--dark-grayish-blue);
+}
+
+hr {
+    margin-top: 1rem;
+    opacity: 0.5;
+    width: 100%;
+
+}
+
+.numbers-container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+h2 {
+    font-size: 18px;
+}
+
+.numbers>p {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: var(--dark-grayish-blue);
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (min-width:769px) {
+    body{
+        background-size: 100vw;
+        background-position:-500px -800px, 500px 300px;
+    }
+}
