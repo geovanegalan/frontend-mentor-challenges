@@ -1,0 +1,117 @@
+/* MOBILE FIRST */
+
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+:root {
+    --title-font: 'Big Shoulders Display', sans-serif;
+    --paragraph-font: 'Lexend Deca', sans-serif;
+
+    --orange: hsl(31, 77%, 52%);
+    --cyan: hsl(184, 100%, 22%);
+    --dark-cyan: hsl(179, 100%, 13%);
+
+    --transparant-white: hsla(0, 0%, 100%, 0.75);
+    --light-gray: hsl(0, 0%, 95%);
+}
+
+body {
+    display: flex;
+    height: 175vh;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    width: 337.5px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.description-container {
+    height: 480px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 35px;
+    padding: 50px;
+}
+
+.sedans {
+    background-color: var(--orange);
+}
+
+.suvs {
+    background-color: var(--cyan);
+}
+
+.luxury {
+    background-color: var(--dark-cyan);
+}
+
+h1 {
+    font-family: var(--title-font);
+    color: var(--light-gray);
+    text-transform: uppercase;
+    font-size: 2.3rem;
+}
+
+p {
+    font-size: 15px;
+    font-family: var(--paragraph-font);
+    line-height: 1.4rem;
+    color: var(--transparant-white);
+}
+
+img {
+    width: 60px;
+}
+
+button {
+    width: 150px;
+    height: 45px;
+    border-radius: 50px;
+    border: none;
+    font-family: var(--paragraph-font);
+    font-weight: bold;
+}
+
+.sedans>button {
+    color: var(--orange);
+}
+
+.suvs>button {
+    color: var(--cyan);
+}
+
+.luxury>button {
+    color: var(--dark-cyan);
+}
+
+button:hover {
+    color: var(--light-gray);
+    background-color: transparent;
+    border: 1px solid var(--light-gray);
+    transition: all .7s;
+    cursor: pointer;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (min-width:769px) {
+    body {
+        height: 100vh;
+    }
+
+    main {
+        width: calc(337.5px*3);
+        flex-direction: row;
+    }
+}
