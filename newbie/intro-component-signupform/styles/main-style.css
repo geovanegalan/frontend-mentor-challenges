@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --red: hsl(0, 100%, 74%);
+    --green: hsl(154, 59%, 51%);
+    --blue: hsl(248, 32%, 49%);
+    --dark-blue: hsl(249, 10%, 26%);
+    --grayish-blue: hsl(246, 25%, 77%);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 15px;
+    background-image: url(../images/bg-intro-desktop.png);
+    background-color: var(--red);
+}
+
+.left-container {
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    font-size: 27px;
+    margin-bottom: 20px;
+}
+
+.left-container p {
+    color: white;
+    font-size: 16px;
+    text-align: center;
+}
+
+.try-free {
+    background-color: var(--blue);
+    width: 100%;
+    border-radius: 10px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 75px;
+    box-shadow: 0px 7px 0px rgba(0, 0, 0, 0.199);
+    margin-bottom: 30px;
+}
+
+.try-free p {
+    color: white;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.try-free span {
+    font-weight: bold;
+}
+
+.try-free:hover {
+    background-color: var(--grayish-blue);
+    cursor: pointer;
+    transition: all .3s;
+}
+
+form {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    box-shadow: 0px 7px 0px rgba(0, 0, 0, 0.226);
+    position: relative;
+}
+
+form input {
+    height: 50px;
+    border: 1px solid rgba(0, 0, 0, 0.096);
+    border-radius: 10px;
+}
+
+.btn {
+    background-color: var(--green);
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+form .terms-services {
+    font-size: 10px;
+    text-align: center;
+    padding: 0px 50px;
+    color: var(--grayish-blue);
+}
+
+form a {
+    text-decoration: none;
+    color: var(--red);
+    font-weight: bolder;
+}
+
+.error-msg {
+    color: red;
+    font-size: 11px;
+    font-style: italic;
+    text-align: right;
+    display: none;
+}
+
+#name-error,
+#l-name-error,
+#email-error,
+#pswd-error {
+    position: absolute;
+}
+
+#name-error {
+    top: 70px;
+    right: 10px;
+}
+
+#l-name-error {
+    top: 150px;
+    right: 10px;
+}
+
+#email-error {
+    top: 230px;
+    right: 10px;
+}
+
+#pswd-error {
+    top: 310px;
+    right: 10px;
+}
+
+::placeholder {
+    color: var(--dark-blue);
+    font-weight: 600;
+    padding: 10px;
+}
+
+.btn:hover {
+    background-color: rgba(12, 161, 12, 0.712);
+    transition: all .3s;
+    cursor: pointer;
+}
+
+@media screen and (min-width:1024px) {
+    body {
+        flex-direction: row;
+        height: 100vh;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .left-container,
+    .right-container {
+        width: 565px;
+    }
+
+    form {
+        height: 470px;
+        padding: 30px;
+    }
+
+    .left-container h1 {
+        font-size: 60px;
+        text-align: left;
+    }
+
+    .left-container p {
+        text-align: left;
+        font-size: 22px;
+    }
+
+    #name-error {
+        top: 80px;
+        right: 10px;
+    }
+
+    #l-name-error {
+        top: 160px;
+        right: 10px;
+    }
+
+    #email-error {
+        top: 240px;
+        right: 10px;
+    }
+
+    #pswd-error {
+        top: 320px;
+        right: 10px;
+    }
+}

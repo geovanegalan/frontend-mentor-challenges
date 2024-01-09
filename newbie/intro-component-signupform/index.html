@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles/main-style.css">
+    <title>Intro component</title>
+</head>
+
+<body>
+    <div class="left-container">
+        <h1>Learn to code by watching others</h1>
+        <p>See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but
+            understanding how developers think is invaluable.</p>
+    </div>
+    <div class="right-container">
+        <div class="try-free">
+            <p><span>Try it free 7 days</span> then $20/mo. thereafter</p>
+        </div>
+        <form action="#">
+            <input type="text" name="name" id="name" placeholder="First Name" required autocomplete="on">
+            <p class="error-msg" id="name-error">First Name cannot be empty</p>
+            <input type="text" name="lname" id="last-name" placeholder="Last Name" required autocomplete="on">
+            <p class="error-msg" id="l-name-error">Last Name cannot be empty</p>
+            <input type="email" name="email" id="email" placeholder="Email Address" required autocomplete="on"> 
+            <p class="error-msg" id="email-error">Looks like this is not an email</p>
+            <input type="password" name="password" id="password" placeholder="Password" required>
+            <p class="error-msg" id="pswd-error">Password cannot be empty</p>
+            <input type="submit" value="Claim your free trial" class="btn">
+            <p class="terms-services">By clicking the button, you are agreeing to our <a href="#">Terms and Services</a></p>
+        </form>
+    </div>
+    <script src="scripts/script.js"></script>
+</body>
+
+</html>
