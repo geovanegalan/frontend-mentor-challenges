@@ -31,11 +31,11 @@ btn.addEventListener("click", function () {
         emailError.style.display = 'none'
     }
 
-    if (password.value===''){
-        pswdError.style.display='inline'
+    if (password.value === '') {
+        pswdError.style.display = 'inline'
     } else {
-        pswdError.style.display='none'
-        
+        pswdError.style.display = 'none'
+
     }
 })
 
