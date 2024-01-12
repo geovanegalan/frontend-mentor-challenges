@@ -1,34 +1,36 @@
 const btn = document.querySelector('.btn')
 
-btn.addEventListener('click', function () {
+let showYears = document.querySelector('#years-number')
+let showMonths = document.querySelector('#months-number')
+let showDays = document.querySelector('#days-number')
 
+const errorMsg = document.querySelectorAll('.error-msg')
 
+btn.addEventListener("click", basicValidation);
+
+function basicValidation() {
     let dayInput = document.querySelector('#day').value
     let monthInput = document.querySelector('#month').value
     let yearInput = document.querySelector('#year').value
 
-    let years = document.querySelector('#years-number')
-    let months = document.querySelector('#months-number')
-    let days = document.querySelector('#days-number')
-
-    let date = new Date()
-    let d2 = date.getDate()
-    let m2 = date.getMonth()
-    let y2 = date.getFullYear()
-
-    let month = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
-
-    if (dayInput > d2) {
-        d2 = d2 + month[m2 - 1]
-        m2 = m2 - 1
-    } if (monthInput > m2) {
-        m2 = m2 + 12
-        y2 = y2 - 1
+    // Limpar mensagens de erro anteriores
+    for (let i = 0; i < 3; i++) {
+        errorMsg[i].innerHTML = ''
     }
-    let d = d2 - dayInput
-    let m = m2 - monthInput
-    let y = y2 - yearInput
 
-    days.innerHTML = d
+    if (dayInput === '') {
+        errorMsg[0].innerHTML = 'This field is required'
+    }
 
-})
+    if (monthInput === '') {
+        errorMsg[1].innerHTML = 'This field is required'
+    }
+
+    if (yearInput === '') {
+        errorMsg[2].innerHTML = 'This field is required'
+    }
+}
+
+
+
+

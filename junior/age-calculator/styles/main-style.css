@@ -78,7 +78,8 @@ input:nth-child(2) {
     background-color: var(--purple);
     position: absolute;
     top: 90px;
-    right: 0px;
+    right: 30px;
+    z-index: 1;
 }
 
 .btn:hover {
@@ -87,9 +88,24 @@ input:nth-child(2) {
     transition: all .5s;
 }
 
+.error-msg {
+    color: var(--light-red);
+    font-style: italic;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+/* .error-day,
+.error-month,
+.error-year {
+} */
+
 .line {
     border: 1px solid var(--light-grey);
-    width: 100%;
+    width: 25%;
+    position: absolute;
+    translate: 0px 120px;
+
 }
 
 h1 {
