@@ -70,7 +70,7 @@ input:nth-child(2) {
     font-size: 32px;
 }
 
-.btn {
+#btn {
     border-radius: 50%;
     width: 65px;
     height: 65px;
@@ -82,7 +82,7 @@ input:nth-child(2) {
     z-index: 1;
 }
 
-.btn:hover {
+#btn:hover {
     background-color: black;
     cursor: pointer;
     transition: all .5s;
@@ -94,11 +94,6 @@ input:nth-child(2) {
     font-weight: 600;
     font-size: 12px;
 }
-
-/* .error-day,
-.error-month,
-.error-year {
-} */
 
 .line {
     border: 1px solid var(--light-grey);

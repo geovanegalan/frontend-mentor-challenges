@@ -1,47 +1,160 @@
-const btn = document.querySelector('.btn')
+window.onload = function () {
+    const day = document.querySelector("#day")
+    const month = document.querySelector("#month")
+    const year = document.querySelector("#year")
 
-let showYears = document.querySelector('#years-number')
-let showMonths = document.querySelector('#months-number')
-let showDays = document.querySelector('#days-number')
+    const labels = document.getElementsByTagName("label")
+    const error = document.getElementsByClassName("error-msg")
+    const submitButton = document.getElementById("btn")
+    const spans = document.getElementsByTagName("span")
 
-const errorMsg = document.querySelectorAll('.error-msg')
 
-btn.addEventListener("click", basicValidation);
+    const date = new Date()
 
-function isLeapYear(year) {
-    return (year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0);
+    let currentDay = date.getDate()
+    let currentMonth = date.getMonth() + 1
+    let currentYear = date.getFullYear()
+
+
+    const typeOfError = [
+        "",
+        "This field is required",
+        "Must be a vali day",
+        "Must be a valid month",
+        "Must be a valid year",
+        "Must be a valid date"
+    ]
+
+    const errorState = (numberOfError, typeOfDate, typeOfError, color) => {
+        error[numberOfError].innerHTML = typeOfError
+        labels[numberOfError].style.color = color
+        typeOfDate.style.borderColor = color
+    }
+
+    const isValidDate = (day, month, year) => {
+        month = month - 1
+        fullDate = new Date(year, month, day)
+        if (day == fullDate.getDate() && month == fullDate.getMonth() && year == fullDate.getFullYear())
+            return true
+        else
+            return false
+    }
+
+    const substractAge = () => {
+        let newYear = Math.abs(currentYear - year.value)
+        let newMonth = 0
+
+        if (currentMonth >= month.value) {
+            newMonth = currentMonth - month.value
+        }
+        else {
+            newYear--
+            newMonth = 12 + currentMonth - month.value
+        }
+
+
+        let newDay = 0
+        if (currentDay >= day.value) {
+            newDay = currentDay - day.value
+        }
+        else {
+            newMonth--
+            if (isValidDate(day.value, month.value, year.value)) {
+                newDay = 30 + currentDay - day.value
+            }
+            else {
+                newDay = currentDay - day.value
+            }
+
+            if (newMonth < 0) {
+                newMonth = 11
+                newYear--
+            }
+            if (newMonth < currentMonth) {
+                newDay++
+            }
+        }
+
+        spans[0].innerHTML = newYear
+        spans[1].innerHTML = newMonth
+        spans[2].innerHTML = newDay
+    }
+
+    const isDayCorrect = () => {
+        if (day.value == "") {
+            errorState(0, day, typeOfError[1], "#ff5757")
+            return false
+        } else if (day.value <= 0 || day.value > 31) {
+            errorState(0, day, typeOfError[2], "#ff5757")
+            return false
+        }
+        else if (isValidDate(day.value, month.value, year.value) == false) {
+            errorState(0, day, typeOfError[5], "#ff5757")
+            return false
+        } else {
+            errorState(0, day, typeOfError[0], "")
+            return true
+        }
+    }
+
+    const isMonthCorrect = () => {
+        if (month.value == "") {
+            errorState(1, month, typeOfError[1], "#ff5757")
+            return false
+        }
+        else if (month.value <= 0 || month.value > 12) {
+            errorState(1, month, typeOfError[3], "#ff5757")
+            return false
+        }
+        else if (isValidDate(day.value, month.value, year.value) == false) {
+            errorState(1, month, typeOfError[0], "#ff5757")
+        }
+        else {
+            errorState(1, month, typeOfError[0], "")
+            return true
+        }
+    }
+
+    const isYearCorrect = () => {
+        if (year.value == "") {
+            errorState(2, year, typeOfError[1], "#ff5757")
+            return false
+        }
+        else if (year.value > currentYear) {
+            errorState(2, year, typeOfError[4], "#ff5757")
+            return false
+        }
+        else if (year.value == currentYear && month.value > currentMonth) {
+            errorState(1, month, typeOfError[3], "#ff5757")
+            return false
+        }
+        else if (year.value == currentYear && month.value == currentMonth && day.value > currentDay) {
+            errorState(0, day, typeOfError[2], "#ff5757")
+            return false
+        }
+        else if (isValidDate(day.value, month.value, year.value) == false) {
+            errorState(2, year, typeOfError[0], "#ff5757")
+            return false
+        }
+        else {
+            errorState(2, year, typeOfError[0], "")
+            return true
+        }
+    }
+
+    submitButton.addEventListener("click", (e) => {
+        e.preventDefault()
+
+        const isDayValid = isDayCorrect()
+        const isMonthValid = isMonthCorrect()
+        const isYearValid = isYearCorrect()
+
+        if (isDayValid && isMonthValid && isYearValid) {
+            substractAge()
+        }
+    })
+
 }
 
-function basicValidation() {
-    let dayInput = document.querySelector('#day').value
-    let monthInput = document.querySelector('#month').value
-    let yearInput = document.querySelector('#year').value
 
-    // Limpar mensagens de erro anteriores
-    for (let i = 0; i < 3; i++) {
-        errorMsg[i].innerHTML = ''
-    }
-
-    if (dayInput === '') {
-        errorMsg[0].innerHTML = 'This field is required'
-    }
-
-    if (monthInput === '') {
-        errorMsg[1].innerHTML = 'This field is required'
-    } else if (monthInput < 1 || monthInput > 12) {
-        errorMsg[1].innerHTML = 'Invalid month'
-    } else if ((monthInput === '4' || monthInput === '6' || monthInput === '9' || monthInput === '11') && dayInput > 30) {
-        errorMsg[0].innerHTML = 'April, June, September, and November have 30 days';
-    } else if (monthInput === '2' && (dayInput > 28 || (dayInput > 29 && !isLeapYear(yearInput)))) {
-        errorMsg[0].innerHTML = 'February has 28 days (or 29 in a leap year)';
-    } else if (dayInput > 31) {
-        errorMsg[0].innerHTML = 'Invalid day for the selected month';
-    }
-
-    if (yearInput === '') {
-        errorMsg[2].innerHTML = 'This field is required'
-    } else if (!/^\d+$/.test(yearInput) || yearInput.length !== 4) {
-        errorMsg[2].innerHTML = 'Invalid year format';
-    } 
-}
 
