@@ -2,7 +2,7 @@ const btn = document.querySelector("#btn")
 const errorMsg = document.querySelector(".error-msg")
 const errorIcon = document.querySelector(".error-icon")
 const emailInput = document.querySelector("#email")
-const emailValidation = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
 
 
 
