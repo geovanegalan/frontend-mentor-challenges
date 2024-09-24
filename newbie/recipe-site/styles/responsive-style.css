@@ -30,6 +30,7 @@
 
 main {
     background-color: white;
+    padding-bottom: 1000px;
 }
 
 header>img {
@@ -56,6 +57,7 @@ div {
     background-color: var(--rose50);
     margin: 20px;
     border-radius: 10px;
+
 }
 
 h3 {
@@ -71,10 +73,16 @@ span {
     font-family: 'Outfit-font'
 }
 
-.prep-time>li {
+.prep-time>ul {
     list-style: outside;
     color: var(--stone900);
-    font-family: 'Outfit-font'
+    font-family: 'Outfit-font';
+    padding-left: 20px;
+    line-height: 25px;
+}
+
+::marker {
+    color: var(--rose500);
 }
 
 h2 {
@@ -89,15 +97,65 @@ h2 {
     margin: 20px;
 }
 
-.ingredients>li {
+.ingredients>ul {
     list-style: outside;
     color: var(--stone900);
-    font-family: 'Outfit-font'
+    font-family: 'Outfit-font';
+    line-height: 25px;
 }
 
-.instructions>li{
+.instructions {
+    margin: 20px;
+
+}
+
+.instructions>ol {
     font-family: 'Outfit-font';
     list-style: decimal;
-    padding: 5px;
+    line-height: 25px;
 }
 
+hr {
+    margin: 0px 20px;
+    border: 0.1px solid var(--stone150);
+}
+
+::marker {
+    font-size: 12px;
+}
+
+ol> ::marker {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--brown800);
+
+}
+
+ol>li {
+    padding-left: 20px;
+}
+
+.nutri>p {
+    font-family: 'Outfit-font';
+    padding: 10px 0px;
+    font-size: 16px;
+}
+
+td {
+    font-family: 'Outfit-font';
+    color: var(--stone600);
+    padding: 15px;
+}
+
+.nutri-macros {
+    color: var(--brown800);
+    font-weight: 700;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+tr{
+    border-bottom: 1px solid var(--stone150)
+}
