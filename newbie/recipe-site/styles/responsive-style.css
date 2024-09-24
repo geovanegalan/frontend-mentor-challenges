@@ -1,0 +1,103 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+@font-face {
+    font-family: 'Outfit-font';
+    src: url(../assets/fonts/outfit/Outfit-VariableFont_wght.ttf), format('ttf');
+
+}
+
+@font-face {
+    font-family: 'Young-serif';
+    src: url(../assets/fonts/young-serif/YoungSerif-Regular.ttf), format('ttf');
+}
+
+:root {
+    /* colors */
+
+    --stone100: hsl(30, 54%, 90%);
+    --stone150: hsl(30, 18%, 87%);
+    --stone600: hsl(30, 10%, 34%);
+    --stone900: hsl(24, 5%, 18%);
+
+    --brown800: hsl(14, 45%, 36%);
+
+    --rose500: hsl(332, 51%, 32%);
+    --rose50: hsl(330, 100%, 98%);
+}
+
+main {
+    background-color: white;
+}
+
+header>img {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+h1 {
+    padding: 20px;
+    font-family: 'Young-serif';
+}
+
+main>p {
+    padding: 5px 20px;
+    font-size: 16px;
+    font-family: 'Outfit-font';
+}
+
+div {
+    padding: 20px;
+}
+
+.prep-time {
+    background-color: var(--rose50);
+    margin: 20px;
+    border-radius: 10px;
+}
+
+h3 {
+    font-family: 'Outfit-font';
+    font-size: 16px;
+    color: var(--rose500);
+    padding-bottom: 10px;
+}
+
+span {
+    font-weight: 700;
+    color: var(--stone900);
+    font-family: 'Outfit-font'
+}
+
+.prep-time>li {
+    list-style: outside;
+    color: var(--stone900);
+    font-family: 'Outfit-font'
+}
+
+h2 {
+    font-family: 'Young-serif';
+    color: var(--brown800);
+    font-size: 22px;
+    padding-bottom: 10px;
+    font-weight: 400;
+}
+
+.ingredients {
+    margin: 20px;
+}
+
+.ingredients>li {
+    list-style: outside;
+    color: var(--stone900);
+    font-family: 'Outfit-font'
+}
+
+.instructions>li{
+    font-family: 'Outfit-font';
+    list-style: decimal;
+    padding: 5px;
+}
+
