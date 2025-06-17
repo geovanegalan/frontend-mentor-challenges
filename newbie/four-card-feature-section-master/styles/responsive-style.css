@@ -1,0 +1,52 @@
+@media screen and (min-width: 425px) {
+
+    h1,
+    span {
+        font-size: 1.8rem;
+        width: 340px;
+    }
+
+    header>p {
+        font-size: 1.2rem;
+        max-width: 574px;
+    }
+
+    .box {
+        height: 200px;
+    }
+
+    .box img {
+        width: 50px;
+        margin-top: 30px;
+    }
+}
+
+@media screen and (min-width:1024px) {
+
+    h1,
+    span {
+        font-size: 2.8rem;
+        width: 600px;
+        line-height: 3rem;
+    }
+
+    header p {
+        font-size: 1.4rem;
+        width: 600px;
+        line-height: 1.6rem;
+    }
+
+    .box p {
+        font-size: 0.9rem;
+    }
+
+    .box h2 {
+        font-size: 1.2rem;
+    }
+    main{
+        flex-direction: row;
+        width: 1000px;
+    }
+  
+
+}
