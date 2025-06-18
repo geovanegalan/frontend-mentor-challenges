@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+:root {
+    --cyan: hsl(179, 62%, 43%);
+    --cyan_2: hsla(179, 62%, 43%, 0.616);
+    --bright-yellow: hsl(71, 73%, 54%);
+    --light-gray: hsl(204, 43%, 93%);
+    --grayish-blue: hsl(218, 22%, 67%);
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Karla';
+    font-size: 16px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--light-gray);
+}
+
+main {
+    width: 350px;
+    height: 800px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.075);
+    overflow: hidden;
+}
+
+.join {
+    height: 280px;
+    background-color: white;
+    padding: 30px;
+}
+
+.subs {
+    height: 260px;
+    background-color: var(--cyan);
+    padding: 30px;
+    color: var(--light-gray);
+}
+
+.why_us {
+    height: 260px;
+    background-color: var(--cyan_2);
+    padding: 30px;
+}
+
+h1 {
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+h2 {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+p {
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+}
+
+.join h1 {
+    color: var(--cyan);
+    margin-bottom: 2rem;
+}
+
+.join h2 {
+    color: var(--bright-yellow);
+    margin-bottom: 1.5rem;
+}
+
+.join p {
+    color: var(--grayish-blue);
+}
+
+.subs h1 {
+    margin-bottom: 0.9rem;
+}
+
+.price {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 0.7rem;
+}
+
+.price h2{
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.price p{
+    color: var(--light-gray);
+}
+
+.subs p{
+    font-size: 1.1rem;
+}
+button{
+    background-color: var(--bright-yellow);
+    width: 290px;
+    height: 50px;
+    border: none;
+    color: var(--light-gray);
+    font-weight: 700;
+    font-size: 1.1rem;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.103);
+    border-radius: 7px;
+    margin-top:2.5rem;
+}
