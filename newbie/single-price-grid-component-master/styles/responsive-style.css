@@ -1,0 +1,24 @@
+@media screen and (min-width: 768px) {
+    main {
+        min-width: 700px;
+        height: 520px;
+    }
+
+    .down_boxes {
+        display: flex;
+        flex-direction: row;
+        min-width: 700px;
+    }
+
+    .join {
+        height: 50%;
+    }
+
+    .why_us {
+        width: 50%;
+    }
+
+    .subs {
+        width: 50%;
+    }
+}
